@@ -55,3 +55,16 @@ python -m agent.main
 
 - In the sample runtime flow, `mock_human_approval(..., approved=False)` intentionally pauses mutation execution.
 - Set `approve_mutations=True` in `orchestrate()` only when explicit approval is available.
+
+
+## Create a ZIP for local run
+
+Use the packaging script to generate a clean zip (excluding `.git`, caches, and local `.env`):
+
+```bash
+bash scripts/create_release_zip.sh
+```
+
+Output:
+
+- `dist/lloyds-jira-orchestrator.zip`
